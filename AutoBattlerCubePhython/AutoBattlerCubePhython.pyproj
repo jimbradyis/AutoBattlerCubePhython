@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5908855b-3e41-42df-a9c2-619c7e881c7f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>AutoBattlerCubePhython</Name>
+    <RootNamespace>AutoBattlerCubePhython</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="runserver.py" />
+    <Compile Include="AutoBattlerCubePhython\__init__.py" />
+    <Compile Include="AutoBattlerCubePhython\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AutoBattlerCubePhython\" />
+    <Folder Include="AutoBattlerCubePhython\static\" />
+    <Folder Include="AutoBattlerCubePhython\static\content\" />
+    <Folder Include="AutoBattlerCubePhython\static\fonts\" />
+    <Folder Include="AutoBattlerCubePhython\static\scripts\" />
+    <Folder Include="AutoBattlerCubePhython\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="AutoBattlerCubePhython\static\content\bootstrap.css" />
+    <Content Include="AutoBattlerCubePhython\static\content\bootstrap.min.css" />
+    <Content Include="AutoBattlerCubePhython\static\content\site.css" />
+    <Content Include="AutoBattlerCubePhython\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AutoBattlerCubePhython\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="AutoBattlerCubePhython\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="AutoBattlerCubePhython\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\bootstrap.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\bootstrap.min.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery-1.10.2.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery.validate.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery.validate.min.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\respond.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\respond.min.js" />
+    <Content Include="AutoBattlerCubePhython\static\scripts\_references.js" />
+    <Content Include="AutoBattlerCubePhython\templates\about.html" />
+    <Content Include="AutoBattlerCubePhython\templates\contact.html" />
+    <Content Include="AutoBattlerCubePhython\templates\index.html" />
+    <Content Include="AutoBattlerCubePhython\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.13</Version>
+      <Description>env (Python 3.13 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
