@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Battler Cube Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+DW+Pica&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Main Menu Screen -->
+        <div id="main-menu-screen" class="screen active">
+            <h1>Auto Battler Cube</h1>
+            <div class="menu">
+                <button id="add-player-btn">Add New Players</button>
+                <button id="view-stats-btn">View Player Stats</button>
+                <button id="start-draft-btn">Start Draft</button>
+            </div>
+        </div>
+
+        <!-- Add Player Screen -->
+        <div id="add-player-screen" class="screen">
+            <h2>Add New Player</h2>
+            <input type="text" id="new-player-name" placeholder="Enter player name">
+            <button id="save-player-btn">Save Player</button>
+            <button class="back-to-main">Back to Main Menu</button>
+        </div>
+
+        <!-- View Stats Screen -->
+        <div id="view-stats-screen" class="screen">
+            <h2>Player Statistics</h2>
+            <div id="stats-container"></div>
+            <button class="back-to-main">Back to Main Menu</button>
+        </div>
+
+        <!-- Start Draft Screen -->
+        <div id="start-draft-screen" class="screen">
+            <h2>Draft Setup</h2>
+            <div id="draft-setup-options"></div>
+            <button id="begin-draft-btn">Begin Draft</button>
+            <button class="back-to-main">Back to Main Menu</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div id="game-info"></div>
+            <div id="player-status-container"></div>
+            <div id="battle-pairings-container"></div>
+            <div id="event-log-container">
+                <h4>Event Log</h4>
+                <div id="event-log"></div>
+            </div>
+            <button id="end-battle-btn" disabled>End Battle</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen">
+            <h2>Game Over!</h2>
+            <h3 id="winner-declaration"></h3>
+            <div id="final-standings"></div>
+            <button class="back-to-main">Back to Main Menu</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
